@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>VueJs Tutorial</title>
+        <link href="style.css" rel="stylesheet"/>
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            <h1>Events</h1>
+
+            <!-- on click event using v-on directives -->
+            <!-- @ is short hand of v-on: -->
+            <button @click="add(1)">Add a Year</button>
+
+
+            <!-- event modifiers helps to modify any event -->
+            <!-- we are using 'once' modifier to allow click on the subtract button only once-->
+            <button v-on:click.once="subtract(1)">Subtract a Year</button>
+            
+            <!-- on double click event using v-on directives -->
+            <button @dblclick="add(10)">Add 10 Years</button>
+            <button v-on:dblclick="subtract(10)">Subtract 10 Years</button>
+            <p>My age is {{age}}</p>
+
+            <!-- calling a function during mousemove event -->
+            <div id="canvas" v-on:mousemove="updateXY">{{x}},{{y}}</div>
+
+            <a v-on:click.prevent="click" href="https://shafis-blog.herokuapp.com">My Site</a>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>

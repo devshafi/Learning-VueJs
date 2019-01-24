@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>VueJs Tutorial</title>
+        <link href="style.css" rel="stylesheet"/>
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <div id="vue-app"> 
+        <!--calling method from vue-->
+        <h1>{{greet('Day')}}</h1>  
+        
+        <!-- calling data fro vue -->
+        <p>Name: {{name}}<p>
+        <p>Job: {{job}}</p>
+
+
+        <!-- data binding in vue js -->
+        <h1>Data Binding</h1>
+
+        <!-- binding value from data in any attribute fo html -->
+        <a v-bind:href="website">Shafis Blog</a>
+        <input type="text" v-bind:value="job">
+
+        <!--short hand binding value from data in any attribute fo html -->
+        <a :href="website">Shafis Blog</a>
+        <input type="text" value="job">
+
+        <!-- binding html  -->
+        <p v-html="websiteTag"></p>
+        
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
