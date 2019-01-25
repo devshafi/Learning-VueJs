@@ -8,7 +8,50 @@
     </head>
     <body>
         <div id="vue-app">
-        
+            <h1>Looping through lists</h1>
+            
+            <!-- cyclcing through a normal array using v-for directive -->
+            <ul>
+                <li v-for="character in characters">{{character}}</li>
+            </ul>
+
+            <!-- cycling through a nested object array using v-for directive -->
+            <ul>
+                <li v-for="ninja in ninjas">{{ninja.name}} - {{ninja.age}}</li>
+            </ul>
+
+            <!-- we can use v-for directive with any type of dom of html -->
+            <!-- using v-for directive in div -->
+            <div v-for="ninja in ninjas">
+                <h3>{{ninja.name}}</h3>
+                <p>{{ninja.age}}</p>
+            </div>
+
+            <!-- we can also access the index of the objects -->
+            <!-- second paramter of the v-for directive takes index of the object -->
+            <!-- things to be noted that through this looping everytime a new div is created -->
+            <!-- and it is shown in the browser (we can see if we inspect the htlm element) -->
+            <!-- if don't want to show each div in the browser we can use 'tamplate' 
+                which hides each div in the browser -->
+            <div v-for="(ninja,index) in ninjas">
+                    <h3>{{index}}.{{ninja.name}}</h3>
+                    <p>{{ninja.age}}</p>
+            </div>
+
+            <!-- using template instead of div will remove the dive from the html in runtime -->
+            <template v-for="(ninja,index) in ninjas">
+                    <h3>{{index}}.{{ninja.name}}</h3>
+                    <p>{{ninja.age}}</p>
+            </template>
+
+            <!-- we can also cycle through each object -->
+            <template v-for="ninja in ninjas">
+                <div v-for="(val,key) in ninja">
+                    <p>{{key}}-{{val}}</p>
+                </div>
+            </template>
+
+
 
         </div>
 
