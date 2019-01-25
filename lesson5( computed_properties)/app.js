@@ -34,7 +34,7 @@ new Vue({
       },
       addToB:function(){
         
-        console.log('addToA');
+        console.log('addToB');
         return this.b+this.age;
       }
     }
