@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>VueJs Tutorial</title>
+        <link href="style.css" rel="stylesheet"/>
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <h1>Components</h1>
+
+        <!-- first vue instance is controlling this part of the div -->
+        <div id="vue-app-one">
+            <!-- using component  -->
+            <!-- greeting is not a html tag, it is a template which we made it in app.js file  -->
+            <!-- it is known as component -->
+            <h1>Vue app one</h1>
+            <greeting></greeting>  
+        </div>
+
+        <!-- second vue instance is controlling this part of the div -->
+        <div id="vue-app-two">
+            <h1>Vue app two</h1>
+            <greeting></greeting>    
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
